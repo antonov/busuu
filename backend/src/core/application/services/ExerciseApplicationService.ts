@@ -1,8 +1,8 @@
 import { NewExerciseDTO } from '../../shared/dto/NewExerciseDTO';
-import { ExerciseService } from 'src/core/domain/ports/inbound/ExerciseService';
+import { ExerciseService } from '../../domain/ports/inbound/ExerciseService';
 import { ExerciseApplication } from '../ExerciseApplication';
-import { UserService } from 'src/core/domain/ports/inbound/UserService';
-import { Exercise } from 'src/core/domain/entities/Exercise';
+import { UserService } from '../../domain/ports/inbound/UserService';
+import { Exercise } from '../../domain/entities/Exercise';
 import { ExerciseApplicationError } from '../../shared/error/ExerciseApplicationError';
 
 export class ExerciseApplicationService implements ExerciseApplication {

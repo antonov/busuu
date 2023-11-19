@@ -1,7 +1,7 @@
 import { ExerciseService } from '../ports/inbound/ExerciseService';
 import { ExerciseRepository } from '../ports/outbound/ExerciseRepository';
 import { Exercise } from '../entities/Exercise';
-import { ExerciseServiceError } from 'src/core/shared/error/ExerciseServiceError';
+import { ExerciseServiceError } from '../../shared/error/ExerciseServiceError';
 
 export class ExerciseDomainService implements ExerciseService {
   private repository: ExerciseRepository;
