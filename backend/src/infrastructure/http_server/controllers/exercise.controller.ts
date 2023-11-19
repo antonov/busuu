@@ -3,9 +3,9 @@ import { ApiBadRequestResponse, ApiCreatedResponse, ApiInternalServerErrorRespon
 import { ExerciseApplication } from "../../../core/application/ExerciseApplication";
 import { EXERCISE_APPLICATION } from "../../../core/core.module";
 import { Log } from "../../shared/Log";
-import { ExerciseCreatorFilter } from "../exception-filters/exercise-exception.filter";
+import { ExerciseCreatorFilter } from "../exception_filters/exercise_exception.filter";
 import { AppResponse } from "../model/app.response";
-import { CreateExerciseRequest } from "../model/create-exercise.request";
+import { CreateExerciseRequest } from "../model/create_exercise.request";
 
 
 @ApiTags('Exercises')
@@ -23,7 +23,7 @@ export class ExerciseController {
     async createExercise(@Body() request: CreateExerciseRequest): Promise<AppResponse> {
         
         Log.info(`(POST) Create exercise`, request)
-        const exerciseId = await this.application.createExercise(request) 
+        const exerciseId = await this.application.create(request) 
         
         return {
             status: 201,

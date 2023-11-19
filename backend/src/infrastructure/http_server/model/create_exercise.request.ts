@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-export class CreateProductRequest {
+export class CreateExerciseRequest {
   @ApiProperty({
     description: 'Exercise content',
     type: String,

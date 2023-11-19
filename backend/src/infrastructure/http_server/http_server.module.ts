@@ -1,4 +1,13 @@
-import { Module } from '@nestjs/common';
+import { Module } from "@nestjs/common";
+import { ExerciseController } from "./controllers/exercise.controller";
+import { RootController } from "./controllers/root.controller";
 
-@Module({})
-export class HttpServerModule {}
+@Module({
+    controllers: [
+        RootController,
+        ExerciseController
+    ],
+})
+export class HttpServerModule {
+
+}
