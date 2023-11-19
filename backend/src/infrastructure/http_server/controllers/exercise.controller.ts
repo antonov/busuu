@@ -6,6 +6,7 @@ import { Log } from "../../shared/Log";
 import { ExerciseCreatorFilter } from "../exception_filters/exercise_exception.filter";
 import { AppResponse } from "../model/app.response";
 import { CreateExerciseRequest } from "../model/create_exercise.request";
+import { ListExerciseResponse } from "../model/list_exercise.response";
 
 
 @ApiTags('Exercises')
@@ -36,16 +37,10 @@ export class ExerciseController {
     @ApiInternalServerErrorResponse({ description: 'Server error'})
     @HttpCode(200)
     @Get()
-    async findAll(): Promise<AppResponse> {
-        
+    async findAll(): Promise<ListExerciseResponse> {
         Log.info('(GET) Get exercises')
         const exercises = await this.application.findAll();
-        
-        return {
-            status: 200,
-            data: exercises
-        }
-
+        return exercises;
     }
 
     

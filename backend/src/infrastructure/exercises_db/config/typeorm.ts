@@ -15,10 +15,6 @@ const config = {
     database: `${process.env.DATABASE_NAME}`,
     entities: [ExerciseEntity, UserEntity],
     synchronize: true,
-    migrationsRun: false,
-    cli: {
-        migrationsDir: 'dist/infrastructure/exercises_db/migrations'
-    },
     logging: ['query']
 }
 
