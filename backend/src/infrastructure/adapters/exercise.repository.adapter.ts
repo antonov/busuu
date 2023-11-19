@@ -13,7 +13,19 @@ export class ExerciseRepositoryAdapter implements ExerciseRepository {
   ) {}
 
   async findAll(): Promise<Exercise[]> {
-    return this.repository.find();
+    return this.repository.find({
+      relations: ['user'], 
+      select: {
+        content: true,
+        created_at: true,
+        id: true,
+        user_id: true,
+        user: {
+          id: false,
+          name: true,   
+         }
+        }
+      });
   }
 
   async findByUserId(user_id: string): Promise<Exercise[]> {

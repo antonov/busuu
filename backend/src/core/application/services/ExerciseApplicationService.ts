@@ -23,6 +23,6 @@ export class ExerciseApplicationService implements ExerciseApplication {
   }
 
   async findAll(): Promise<Exercise[]> {
-    return await this.exercise.findAll();
+    return this.exercise.findAll();
   }
 }

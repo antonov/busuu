@@ -4,7 +4,7 @@ export class AppResponse {
     @ApiProperty()
     status: number;
     @ApiProperty()
-    message: string;
+    message?: string;
     @ApiProperty({ nullable: true})
     data?: any
 }

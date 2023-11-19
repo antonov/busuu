@@ -1,27 +1,17 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ExerciseEntity } from './entities/exercise.entity';
-import { UserEntity } from './entities/user.entity';
+import { ConfigModule, ConfigService } from '@nestjs/config';
+import typeorm from './config/typeorm';
 
 @Module({
     imports: [
+        ConfigModule.forRoot({
+            isGlobal: true,
+            load: [typeorm],
+          }),
         TypeOrmModule.forRootAsync({
-            useFactory: () => {
-                return {
-                    type: 'postgres',
-                    host: 'localhost',
-                    port: 5432,
-                    username: 'busuu',
-                    password: 'busuu',
-                    database: 'exercises_db',
-                    entities: [
-                        ExerciseEntity,
-                        UserEntity,
-                    ],
-                    synchronize: true,
-                    logging: ['query']
-                }
-            },
+            inject: [ConfigService],
+            useFactory: async (configService: ConfigService) => (configService.get('typeorm'))
         })
     ]
 })

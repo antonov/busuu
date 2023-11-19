@@ -1,4 +1,4 @@
-import { Body, Controller, HttpCode, HttpStatus, Inject, Post, UseFilters } from "@nestjs/common";
+import { Body, Controller, Get, HttpCode, HttpStatus, Inject, Post, UseFilters } from "@nestjs/common";
 import { ApiBadRequestResponse, ApiCreatedResponse, ApiInternalServerErrorResponse, ApiResponse, ApiTags } from "@nestjs/swagger";
 import { ExerciseApplication } from "../../../core/application/ExerciseApplication";
 import { EXERCISE_APPLICATION } from "../../../core/core.module";
@@ -16,7 +16,7 @@ export class ExerciseController {
     constructor(@Inject(EXERCISE_APPLICATION) private application: ExerciseApplication) {}
 
     @ApiBadRequestResponse({ description: 'Invalid user id'})
-    @ApiInternalServerErrorResponse({ description: 'Error server'})
+    @ApiInternalServerErrorResponse({ description: 'Server error'})
     @ApiCreatedResponse({ description: 'The record has been successfully created.', type: AppResponse })
     @HttpCode(201)
     @Post()
@@ -31,4 +31,22 @@ export class ExerciseController {
         }
 
     }
+
+
+    @ApiInternalServerErrorResponse({ description: 'Server error'})
+    @HttpCode(200)
+    @Get()
+    async findAll(): Promise<AppResponse> {
+        
+        Log.info('(GET) Get exercises')
+        const exercises = await this.application.findAll();
+        
+        return {
+            status: 200,
+            data: exercises
+        }
+
+    }
+
+    
 }

@@ -10,14 +10,8 @@ export class CreateExerciseRequest {
 
   @ApiProperty({
     description: 'User UUID',
-    type: Number,
+    type: String,
     required: true,
   })
   user_id: string;
-
-  @ApiProperty({
-    description: 'User name',
-    required: false,
-  })
-  user_name: string;
 }
