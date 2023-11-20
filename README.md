@@ -60,7 +60,7 @@ $ cd backend && npm run start:dev
 ```
 
 - Once up and running check the Swagger API Docs: http://localhost:3000/api-docs
-- Endpoints for creation and listing is the same but supports GET and Post methods: http://localhost:3000/exercise
+- Endpoints for creation and listing are the same but supports GET and Post methods: http://localhost:3000/exercise
 
 ```bash
 # frontend
