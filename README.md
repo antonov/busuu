@@ -59,13 +59,15 @@ $ cd frontend && npm install
 $ cd backend && npm run start:dev
 ```
 
-Once up and running check the Swagger API Docs: http://localhost:3000/api-docs
+- Once up and running check the Swagger API Docs: http://localhost:3000/api-docs
+- Endpoints for creation and listing is the same but supports GET and Post methods: http://localhost:3000/exercise
 
 ```bash
 # frontend
 $ cd frontend && npm run dev
 ```
-Once up and running should be available at: http://localhost:3001/
+
+- Once up and running should be available at: http://localhost:3001/
 
 ## Testing the app
 
