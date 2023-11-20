@@ -81,6 +81,7 @@ Some of these elements are:
 
 - Frontend testing.
 - Hardcoding of some string and elements.
+- Errors management on frontend.
 - Some security issues like the endpoint is not using any authentication mechanism.
 
 ## Stay in touch
