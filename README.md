@@ -2,7 +2,7 @@
 
 The purpose of the application is to demonstrate the knowledge in NodeJS/NestJS, React/NextJS and skills of Hexagonal Architecture and Typescript.
 
-![Demo Busuu App](path/to/your/gif.gif)
+![Demo Busuu App](demo.gif)
 
 ## Backend description
 
