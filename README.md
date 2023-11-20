@@ -56,12 +56,12 @@ $ cd frontend && npm install
 
 ```bash
 # backend
-$ npm run start
+$ cd backend && npm run start:dev
 ```
 
 ```bash
-# backend
-$ npm run dev
+# frontend
+$ cd frontend && npm run dev
 ```
 
 
@@ -70,14 +70,16 @@ $ npm run dev
 ```bash
 # unit tests in backend code
 $ cd backend && npm run test
+```
 
 ## Future improvements
 
 Due to limited time available for development, certain aspects and features were not fully explored or implemented. This decision was made to prioritize essential functionalities and ensure the timely delivery of the project.
 Some of these elements are:
- - Frontend testing.
- - Hardcoding of some string and elements.
- - Some security issues like the endpoint is not using any authentication mechanism.
+
+- Frontend testing.
+- Hardcoding of some string and elements.
+- Some security issues like the endpoint is not using any authentication mechanism.
 
 ## Stay in touch
 
