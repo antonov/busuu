@@ -59,11 +59,13 @@ $ cd frontend && npm install
 $ cd backend && npm run start:dev
 ```
 
+Once up and running check the Swagger API Docs: http://localhost:3000/api-docs
+
 ```bash
 # frontend
 $ cd frontend && npm run dev
 ```
-
+Once up and running should be available at: http://localhost:3001/
 
 ## Testing the app
 
